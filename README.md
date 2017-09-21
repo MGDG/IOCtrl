@@ -5,6 +5,12 @@
 # 使用说明
 IOCtrl_CallBackProc函数必须被周期循环调用，其入口参数为每次调用的间隔时间，单位为毫秒。
 如，在中断时间为10ms的定时器中断服务程序中：
- void 定时器中断函数(void) {  IOCtrl_CallBackProc(10); }或者在操作系统中创建任务周期调用。
+ 
+ void 定时器中断函数(void) 
+ {  
+  IOCtrl_CallBackProc(10);
+ }
+ 
+或者在操作系统中创建任务周期调用。
 IO控制资源的申请、删除、启动和停止见IOCtrl_demo.c中的示例，示例程序中以控制一个LED为例。
 
